@@ -2,16 +2,8 @@ numpy
 pandas
 matplotlib
 scikit-learn
-<<<<<<< HEAD
+notebook
+jupyter
 fastapi[standard]
 streamlit
 skops
-=======
-notebook
-jupyter
-mlflow
-fastapi[standard]
-streamlit
-joblib
->>>>>>> fb141b04d0cf58537bc9419e808e1bc3a921c105
-pydantic
