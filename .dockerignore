@@ -1,8 +1,0 @@
-my_env/
-.venv/
-__pycache__/
-*.pyc
-.git/
-mlruns/
-mlflow.db
-.ipynb_checkpoints/

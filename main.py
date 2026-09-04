@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import numpy as np
 import skops.io as sio
+from pathlib import Path
 
 
 class HouseData(BaseModel):
@@ -9,6 +10,12 @@ class HouseData(BaseModel):
 
 
 app = FastAPI()
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "model" / "model.skops"
+
+untrusted_types = sio.get_untrusted_types(
+    file=str(MODEL_PATH)
+)
 
 untrusted_types = sio.get_untrusted_types(
     file="model/model.skops"
