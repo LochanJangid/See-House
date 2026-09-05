@@ -29,9 +29,10 @@ preprocessor = Pipeline([
 pipeline = Pipeline([
     ("preprocessor", preprocessor),
     ("model", RandomForestRegressor(
-        n_estimators=100,
+        n_estimators=50,
+        max_depth=15,
         random_state=42,
-        n_jobs=-1
+        n_jobs=1
     ))
 ])
 

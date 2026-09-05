@@ -8,7 +8,14 @@ class HouseData(BaseModel):
     inputs: list[float]
 
 
-app = FastAPI()
+app = FastAPI(
+    title="Golden State Housing Estimator",
+    description="California housing price prediction API",
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json",
+)
 
 untrusted_types = sio.get_untrusted_types(
     file="model/model.skops"
@@ -28,6 +35,11 @@ def read_root():
         "message": "House Price API is running"
     }
 
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy"
+    }
 
 @app.post("/predict")
 def predict(data: HouseData):
