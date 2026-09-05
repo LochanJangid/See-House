@@ -1,9 +1,4 @@
-numpy
-pandas
-matplotlib
 scikit-learn
-notebook
-jupyter
 fastapi[standard]
-streamlit
+uvicorn
 skops

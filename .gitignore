@@ -1,7 +1,5 @@
-mlflow.db
-*.pkl
-my_env/
+.venv/
 __pycache__/
 *.pyc
+.ipynb_checkpoints/
 .env
-.venv/

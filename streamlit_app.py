@@ -292,7 +292,7 @@ with tab_paper:
     """)
 
     st.markdown("### 4. Experimental Setup and Results")
-    st.markdown("The dataset was partitioned into an 80% training set and a 20% holdout test set. Hyperparameter tuning resulted in an optimal configuration of 200 estimators, a maximum tree depth of 25, and a minimum samples-per-leaf of 2.")
+    st.markdown("The dataset was partitioned into an 80% training set and a 20% holdout test set. Hyperparameter tuning resulted in an optimal configuration of 50  estimators, a maximum tree depth of 15.")
 
     # Interactive Charts inside the paper
     paper_col1, paper_col2 = st.columns(2)

@@ -4,16 +4,10 @@ version = "1.0.0"
 description = "California housing price prediction API using FastAPI and Random Forest"
 requires-python = ">=3.12,<3.13"
 
-
 dependencies = [
-    "numpy",
-    "pandas",
-    "matplotlib",
-    "scikit-learn",
-    "notebook",
-    "jupyter",
     "fastapi[standard]",
-    "streamlit",
+    "numpy",
+    "scikit-learn",
     "skops",
 ]
 
