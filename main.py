@@ -17,11 +17,12 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins (good for testing). In production, replace with ["http://localhost:3000", "https://your-nextjs-domain.com"]
-    allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods (POST, GET, etc.)
-    allow_headers=["*"],  # Allows all headers
+    allow_origins=["https://lochan.vercel.app"],
+    allow_credentials=False,
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type"],
 )
+
 print(f"Loading model from {MODEL_PATH} ({MODEL_PATH.stat().st_size / 1e6:.2f} MB)")
 untrusted_types = sio.get_untrusted_types(file=str(MODEL_PATH))
 model = sio.load(str(MODEL_PATH), trusted=untrusted_types)
